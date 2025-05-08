@@ -1,0 +1,37 @@
+Use code with caution.
+JavaScript
+Linhas:
+
+[0, 1, 2]: Representa a primeira linha horizontal (as casas 0, 1 e 2). Se um jogador preencher essas três casas com o mesmo símbolo (X ou O), ele vence.
+
+[3, 4, 5]: Representa a segunda linha horizontal (as casas 3, 4 e 5).
+
+[6, 7, 8]: Representa a terceira linha horizontal (as casas 6, 7 e 8).
+
+Colunas:
+
+[0, 3, 6]: Representa a primeira coluna vertical (as casas 0, 3 e 6).
+
+[1, 4, 7]: Representa a segunda coluna vertical (as casas 1, 4 e 7).
+
+[2, 5, 8]: Representa a terceira coluna vertical (as casas 2, 5 e 8).
+
+Diagonais:
+
+[0, 4, 8]: Representa a diagonal principal (as casas 0, 4 e 8).
+
+[2, 4, 6]: Representa a diagonal secundária (as casas 2, 4 e 6).
+
+Como o Código Usa Isso
+
+A função verificaVitoria() usa esse array combinacoesVitoria para checar se um jogador ganhou. Ela faz o seguinte:
+
+Pega cada "sub-array" (cada combinação): Por exemplo, primeiro pega [0, 1, 2].
+
+Verifica as casas do tabuleiro: Olha se as casas 0, 1 e 2 do tabuleiro (representado pelo array tabuleiro) têm o mesmo símbolo (X ou O). Se tiverem, significa que um jogador preencheu aquela linha, coluna ou diagonal, e venceu!
+
+Repete para todas as combinações: Faz isso para cada linha, coluna e diagonal listada em combinacoesVitoria. Se qualquer uma dessas combinações estiver preenchida com o mesmo símbolo, a função retorna true (o jogador venceu). Se nenhuma combinação estiver completa, a função retorna false.
+
+Em resumo:
+
+combinacoesVitoria é uma lista de todas as maneiras possíveis de ganhar no jogo da velha. Cada "sub-lista" dentro dela representa uma combinação vencedora, usando os números de 0 a 8 para identificar as casas do tabuleiro. O código usa essa lista para verificar, a cada jogada, se alguém completou uma dessas combinações e ganhou o jogo. É como um "gabarito" para a vitória.
